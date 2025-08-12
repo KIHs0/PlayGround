@@ -7,7 +7,6 @@ const app = express();
 const PORT = 8080;
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(folder, "client")));
 // app.get("*", (req, res) => {
 //   // res.sendFile(path.join(folder, "client", "dist", "index.html"));
 // });
