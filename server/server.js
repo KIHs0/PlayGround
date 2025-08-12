@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import router from "./routes/router.dallE.js";
+// import router from "./routes/router.dallE.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
+// app.use("/", router);
 
 app.use(express.static(path.join(folder, "client", "dist")));
 app.get("*", (req, res) => {
