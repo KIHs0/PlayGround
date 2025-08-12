@@ -8,7 +8,7 @@ const PORT = 8080;
 app.use(cors());
 app.use(express.json());
 let folder = path.join(path.dirname(fileURLToPath(import.meta.url)));
-app.use(express.static(path.join(folder, "client", "dist")));
+app.use(express.static(path.join(folder, "client")));
 // app.get("*", (req, res) => {
 //   // res.sendFile(path.join(folder, "client", "dist", "index.html"));
 // });
