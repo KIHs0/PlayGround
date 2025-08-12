@@ -8,6 +8,7 @@ const PORT = 8080;
 app.use(cors());
 app.use(express.json());
 const __dirname = fileURLToPath(import.meta.url);
+// console.log(path.resolve(__dirname, "../../client/dist"));
 // app.get("*", (req, res) => {
 //   // res.sendFile(path.join(folder, "client", "dist", "index.html"));
 // });
