@@ -9,7 +9,7 @@ const openai = new OpenAI({
 });
 
 // GET endpoint for testing
-router.get(":/", (req, res) => {
+router.get("/", (req, res) => {
   res.send("DALL·E router is working!");
 });
 
