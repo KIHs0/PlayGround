@@ -4,8 +4,10 @@ import express from "express";
 import OpenAI from "openai";
 const router = express.Router();
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API,
+  // apiKey: process.env.OPENAI_API,
+  apiKey: "My API Key",
 });
+
 // GET endpoint for testing
 router.get("/", (req, res) => {
   res.send("DALL·E router is working!");
