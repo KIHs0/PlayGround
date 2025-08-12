@@ -9,10 +9,7 @@ app.use(cors());
 app.use(express.json());
 const __dirname = fileURLToPath(import.meta.url);
 const finalPath = path.resolve(__dirname, "../../client/dist");
-// app.get("*", (req, res) => {
-//   // res.sendFile(path.join(folder, "client", "dist", "index.html"));
-// });
-const clientDistPath = path.resolve(__dirname, "../client/dist");
+
 app.all("/{*any}", (req, res, next) => {
   res.sendFile(path.join(finalPath, "index.html"));
 });
