@@ -7,13 +7,13 @@ const app = express();
 const PORT = 8080;
 app.use(cors());
 app.use(express.json());
-let folder = path.join(path.dirname(fileURLToPath(import.meta.url)));
 app.use(express.static(path.join(folder, "client")));
 // app.get("*", (req, res) => {
 //   // res.sendFile(path.join(folder, "client", "dist", "index.html"));
 // });
+const clientDistPath = path.resolve(__dirname, "../client/dist");
 app.all("/{*any}", (req, res, next) => {
-  res.sendFile(path.join(folder, "client", "dist", "index.html"));
+  res.sendFile(path.join(clientDistPath, "index.html"));
 });
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
