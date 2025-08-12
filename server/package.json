@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "cd ../client && npm install && npm run build && cd ../server && npm install",
+    "build": "cd ../client && npm install && npm run build && mkdir -p client/dist && cp -r ../client/dist/* client/dist/",
     "start": "node server.js"
   },
   "keywords": [],
